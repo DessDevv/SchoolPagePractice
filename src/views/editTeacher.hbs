@@ -1,0 +1,104 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 offset-md-3">
+      <div class="card card-body bg-dark p-4 text-white">
+        <h4>Edit Teacher page</h4>
+        <form action="/update-teacher/{{teacher._id}}" method="POST">
+
+          <div>
+            <label for="rfc">Update rfc:</label>
+            <input
+              type="text"
+              name="rfc"
+              placeholder="Rfc"
+              value="{{teacher.rfc}}"
+              class="form-control bg-dark text-white"
+            />
+          </div>
+          <div>
+            <label for="name">Update name:</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              value="{{teacher.name}}"
+              class="form-control bg-dark text-white"
+            />
+          </div>
+          <div>
+            <label for="lastName">Update last name:</label>
+            <input
+              type="text"
+              name="lastName"
+              placeholder="LastName"
+              value="{{teacher.lastName}}"
+              class="form-control bg-dark text-white"
+            />
+          </div>
+          <div>
+            <label for="mothersLastName">Update mother's last name:</label>
+            <input
+              type="text"
+              name="mothersLastName"
+              placeholder="MothersLastName"
+              value="{{teacher.mothersLastName}}"
+              class="form-control bg-dark text-white"
+            />
+          </div>
+          <div>
+            <label for="birthDate">Update birth date:</label>
+            <input
+              type="date"
+              name="birthDate"
+              placeholder="BirthDate"
+              value="{{teacher.birthDate}}"
+              class="form-control bg-dark text-white"
+            />
+          </div>
+          <div>
+            <label for="address">Update address:</label>
+            <input
+              type="text"
+              name="address"
+              placeholder="Address"
+              value="{{teacher.address}}"
+              class="form-control bg-dark text-white"
+            />
+          </div>
+          <div>
+            <label for="phoneNumber">Update phone number:</label>
+            <input
+              type="number"
+              name="phoneNumber"
+              placeholder=" PhoneNumber"
+              value="{{teacher.phoneNumber}}"
+              class="form-control bg-dark text-white"
+            />
+          </div>
+
+          <div>
+            <label for="profession">Update profession:</label>
+            <input
+              type="text"
+              name="hours"
+              placeholder="Profession"
+              value="{{teacher.profession}}"
+              class="form-control bg-dark text-white"
+            />
+          </div>
+          <div>
+            <label for="employeeNumb">Update employee number:</label>
+            <input
+              type="number"
+              name="employeeNumb"
+              placeholder="EmployeeNumb"
+              value="{{teacher.employeeNumb}}"
+              class="form-control bg-dark text-white"
+            />
+          </div>
+          <button class="btn btn-info">Update</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

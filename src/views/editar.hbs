@@ -1,0 +1,21 @@
+<h1>Edit page</h1>
+<form action="/update/{{productos._id}}" method="POST">
+<div>
+    <label for="nombre">Update product:</label>
+    <input type="text" name="nombre" placeholder="Name"
+    value="{{productos.nombre}}">
+</div>
+<div>
+    <label for="descripcion">Update description:</label>
+    <textarea name="descripcion" cols="30" rows="3"
+    placeholder="Description">
+        {{productos.descripcion}}
+    </textarea>>
+</div>
+<div>
+    <label for="precio">Update price:</label>
+    <input type="text" name="precio" placeholder="Price"
+    value="{{productos.precio}}">
+</div>
+<button>Update</button>
+</form>

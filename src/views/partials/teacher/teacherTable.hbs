@@ -1,0 +1,50 @@
+{{#if teacher}}
+<table class="table table-bordered table-hover table-dark">
+    <thead>
+        <tr class="text-center">
+            <th>Num.</th>
+            <th>Rfc</th>
+            <th>Name</th>
+            <th>LastName</th>
+            <th>MothersLastName</th>
+            <th>BirthDate</th>
+            <th>Address</th>
+            <th>PhoneNumber</th>
+            <th>Profession</th>
+            <th>EmployeeNumb</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each teacher}}
+        <tr>
+            <td>{{@index}}</td>
+            <td>{{rfc}}</td>
+            <td>{{name}}</td>
+            <td>{{lastName}}</td>
+            <td>{{mothersLastName}}</td>
+            <td>{{birthDate}}</td>
+            <td>{{address}}</td>
+            <td>{{phoneNumber}}</td>
+            <td>{{profession}}</td>
+            <td>{{employeeNumb}}</td>
+            <td>
+                {{#if opcion}}
+                <a href="/status-teacher/{{_id}}" class="btn btn-warning">No disponible</a>
+                {{else}}
+                <a href="/status-teacher/{{_id}}" class="btn btn-success">Disponible</a>
+                {{/if}}
+                <a href="/update-teacher/{{_id}}" class="btn btn-info">Update</a>
+                <a href="/delete-teacher/{{_id}}" class="btn btn-danger">Delete</a>
+                
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+<div class="text-center text-white">
+    <h1>There aren't teachers</h1>
+    <img src="https://freepngimg.com/thumb/folder/36792-3-folders-file.png" alt=""/>
+</div>
+{{/if}}

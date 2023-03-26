@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 offset-md-3">
+      <div class="card card-body bg-dark p-4 text-white">
+        <h1>Edit Subject page</h1>
+        <form action="/update-subject/{{subject._id}}" method="POST">
+          <div>
+            <label for="name">Update name subject:</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              value="{{subject.name}}"
+              class="form-control bg-dark text-white"
+            />
+          </div>
+          <div>
+            <label for="credits">Update credits:</label>
+            <textarea
+              name="credits"
+              cols="30"
+              rows="3"
+              placeholder="Credits"
+              class="form-control bg-dark text-white"
+            >
+              {{subject.credits}}
+            </textarea>
+          </div>
+          <div>
+            <label for="hours">Update hours:</label>
+            <input
+              type="text"
+              name="hours"
+              placeholder="Hours"
+              value="{{subject.hours}}"
+              class="form-control bg-dark text-white"
+            />
+          </div>
+          <button class="btn btn-info">Update</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

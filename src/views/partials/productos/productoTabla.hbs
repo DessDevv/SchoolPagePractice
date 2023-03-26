@@ -1,0 +1,30 @@
+<table class="table table-bordered table-hover table-dark">
+    <thead>
+        <tr>
+            <th>Num.</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each productos}}
+        <tr>
+            <td>{{@index}}</td>
+            <td>{{nombre}}</td>
+            <td>{{descripcion}}</td>
+            <td>{{precio}}</td>
+            <td>
+                {{#if opcion}}
+                <a href="/status/{{_id}}">No disponible</a>
+                {{else}}
+                <a href="/status/{{_id}}">Disponible</a>
+                {{/if}}
+                <a href="/update/{{_id}}">Update</a>
+                <a href="/delete/{{_id}}">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

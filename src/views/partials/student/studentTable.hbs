@@ -1,0 +1,46 @@
+{{#if student}}
+<table class="table table-bordered table-hover table-dark">
+    <thead>
+        <tr class="text-center">
+            <th>Num.</th>
+            <th>Name</th>
+            <th>LastName</th>
+            <th>MothersLastName</th>
+            <th>BirthDate</th>
+            <th>Gender</th>
+            <th>PhoneNumber</th>
+            <th>Address</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each student}}
+        <tr>
+            <td>{{@index}}</td>
+            <td>{{name}}</td>
+            <td>{{lastName}}</td>
+            <td>{{mothersLastName}}</td>
+            <td>{{birthDate}}</td>
+            <td>{{gender}}</td>
+            <td>{{phoneNumber}}</td>
+            <td>{{address}}</td>
+            <td>
+                {{#if opcion}}
+                <a href="/status-student/{{_id}}" class="btn btn-warning">Unavailable</a>
+                {{else}}
+                <a href="/status-student/{{_id}}" class="btn btn-success">Available</a>
+                {{/if}}
+                <a href="/update-student/{{_id}}" class="btn btn-info">Update</a>
+                <a href="/delete-student/{{_id}}" class="btn btn-danger">Delete</a>
+                
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+<div class="text-center text-white">
+    <h1>There aren't students</h1>
+    <img src="https://freepngimg.com/thumb/folder/36792-3-folders-file.png" class="w-75"/>
+</div>
+{{/if}}

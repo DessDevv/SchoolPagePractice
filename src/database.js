@@ -1,12 +1,12 @@
 //import { connect } from "mongoose";
 import mongoose from "mongoose";
-
+import { MONGODB_URI } from "./config";
 
 const conexionDB =async ()=>{
     /*useNewUrlParser, useUnifiedTopology, useFindAndModifyy useCreateIndex ya no son opciones 
     compatibles. Mongoose 6 siempre se comporta como si useNewUrlParser, useUnifiedTopologyy 
     useCreateIndexfueran truey useFindAndModifyes false.*/
-    const db = "mongodb://127.0.0.1:27017/frstproject-mongo";
+    const db = MONGODB_URI;
     //Parametros(conexionDataBase,{configuracion})).La promesa(nos regresa algo)
     await  mongoose.connect(db,{
         useNewUrlParser: true,
